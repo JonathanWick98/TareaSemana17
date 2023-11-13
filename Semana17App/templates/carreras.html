@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carreras</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        th, td {
+            border: 1px solid #555;
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Carreras Registradas</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Carrera</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Para cada carrera muestra sus campos-->
+            {%for carrera in carreras%}
+
+            <tr>
+                <td>{{carrera.ID_Carrera}}</td>
+                <td>{{carrera.Nombre_Carrera}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <button onclick="regresarPaginaPrincipal()">Regresar a la Página Principal</button>
+
+    <script>
+        function regresarPaginaPrincipal() {
+            window.location.href = 'inicio.html'; 
+        }
+    </script>
+
+</body>
+
+</html>

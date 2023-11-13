@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Bienvenido a la Página de Inicio</h2>
+
+    <button onclick="irAPagina('carreras')">Ir a Carreras</button>
+    <button onclick="irAPagina('profesores')">Ir a Profesores</button>
+    <button onclick="irAPagina('estudiantes')">Ir a Estudiantes</button>
+    <button onclick="irAPagina('asignaturas')">Ir a Asignaturas</button>
+
+    <script>
+        function irAPagina(pagina) {
+            var ruta = '';
+
+            switch (pagina) {
+                case 'carreras':
+                    ruta = 'carreras.html';
+                    break;
+                case 'profesores':
+                    ruta = 'profesores.html';
+                    break;
+                case 'estudiantes':
+                    ruta = 'estudiantes.html';
+                    break;
+                case 'asignaturas':
+                    ruta = 'asignaturas.html'; 
+                    break;
+                default:
+                    break;
+            }
+
+            window.location.href = ruta;
+        }
+    </script>
+
+</body>
+
+</html>
